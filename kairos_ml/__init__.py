@@ -11,10 +11,11 @@ scipy 为可选增强（正态 CDF/分位数，缺失时自动回退 numpy 近�
 - :mod:`kairos_ml.models`   : 岭回归、逻辑回归、梯度提升回归、置换重要性。
 - :mod:`kairos_ml.evaluate` : 命中率、精确率/召回率/F1、信号 PnL、IC、VaR 等。
 - :mod:`kairos_ml.pipeline` : ``ModelPipeline`` 串联特征构造与模型 fit/predict。
+- :mod:`kairos_ml.realdata` : 真实行情 CSV 目录 → 收盘价面板（只读、确定性）。
 """
 from __future__ import annotations
 
-from . import cv, evaluate, features, labels, models, pipeline
+from . import cv, evaluate, features, labels, models, pipeline, realdata
 from .cv import purged_kfold, walk_forward_splits
 from .evaluate import (
     f1,
@@ -51,12 +52,13 @@ from .models import (
     r2_score,
 )
 from .pipeline import ModelPipeline
+from .realdata import list_symbol_files, load_close_panel
 
 __version__ = "0.1.0"
 
 __all__ = [
     # 子模块
-    "features", "labels", "cv", "models", "evaluate", "pipeline",
+    "features", "labels", "cv", "models", "evaluate", "pipeline", "realdata",
     # features
     "rolling_mean", "rolling_std", "rolling_momentum", "lags",
     "cross_sectional_rank", "cross_sectional_zscore",
@@ -74,5 +76,7 @@ __all__ = [
     "t_statistic", "value_at_risk",
     # pipeline
     "ModelPipeline",
+    # realdata
+    "load_close_panel", "list_symbol_files",
     "__version__",
 ]

@@ -7,3 +7,11 @@ build/
 dist/
 .ipynb_checkpoints/
 .DS_Store
+
+# 研究产出：默认忽略全部（可能含大体积明细），仅入库 real_ml 的小体积摘要
+research/*
+!research/real_ml/
+research/real_ml/*
+!research/real_ml/*.md
+!research/real_ml/*.json
+!research/real_ml/*.csv
