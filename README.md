@@ -1,5 +1,7 @@
 # Kairos ML
 
+[![CI](https://github.com/Bruce848647703/kairos-ml/actions/workflows/ci.yml/badge.svg)](https://github.com/Bruce848647703/kairos-ml/actions/workflows/ci.yml)
+
 > Kairos 量化系列的机器学习模块 —— 一个**自研、轻量、零重型依赖**的金融机器学习库。
 
 `kairos_ml` 覆盖金融 ML 的完整链路：**特征工程 → 标签构造 → 时序交叉验证 → 模型 → 评估 → 流水线**。
